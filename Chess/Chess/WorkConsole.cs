@@ -6,29 +6,33 @@ namespace Chess
 {
     class WorkConsole
     {
+        public static string SelectFigure()
+        {
+            Console.WriteLine("Выберете фигуру \n1.Король \n2.Ферзь \n3.Слон \n4.Конь \n5.Ладья \n6.Пешка\n");
+            return Console.ReadLine();
+        }
+
         public static void InputData(out string coordStart, out string coordEnd)
         {
-            Console.WriteLine("Введите начальную и конечную координаты:");
+            Console.WriteLine("\nВведите начальную и конечную координаты:");
             coordStart = Console.ReadLine();
             coordEnd = Console.ReadLine();
         }
-        public static void SelectFigure()
-        {
-            Console.WriteLine("Выберете фигуру ");
-        }
+
         public static void ErrorOutput()
         {
-            Console.WriteLine("Ошибка! Координаты введены неверно");
+            Console.WriteLine("\nОшибка! Координаты введены неверно");
         }
+
         public static void OutputMoveResults(bool correct)
         {
             if (correct)
             {
-                Console.WriteLine("Ход коня верный!");
+                Console.WriteLine("\nХод фигуры верный!");
             }
             else 
             {
-                Console.WriteLine("Ход коня неверный!");
+                Console.WriteLine("\nХод фигуры неверный!");
             }
         }
     }
