@@ -6,8 +6,6 @@ namespace Chess
     {
         static void Main(string[] args)
         {
-            string figure = WorkConsole.SelectFigure();
-
             string coordStart;
             string coordEnd;
             WorkConsole.InputData(out coordStart, out coordEnd);
@@ -20,11 +18,20 @@ namespace Chess
                 WorkConsole.ErrorOutput();
             }
 
-            ReadFigureType(figure, coordStartInArray, coordEndInArray);
-            Board.CreateBoard();
+            char[,] board = Board.CreateBoard();
+
+            CheckIfFigure(coordStartInArray, coordEndInArray, board);
+
+            if (IdentifyFigure(board, coordStartInArray, coordEndInArray))
+            {
+                MoveFigure(board, coordStartInArray, coordEndInArray);
+            }
+            else
+            {
+                WorkConsole.ErrorOutput();
+            }
 
         }
-
         static int[] SplitCoordHorizontAndVertical(string coord)
         {
             int horizontCoord = coord[0] - 64;
@@ -78,32 +85,46 @@ namespace Chess
             return end[0] - start[0] == 0 && end[1] - start[1] == 1;
         }
 
-        static void ReadFigureType(string figure, int[] start, int[] end)
+        static void CheckIfFigure(int[] start, int[] end, char[,] board)
+        {
+            if (board[start[0] - 1, start[1] - 1] == ' ')
+            {
+                WorkConsole.ErrorOutput();
+            }
+        }
+
+        static bool IdentifyFigure(char[,] board, int[] start, int[] end)
         {
             bool correct = false;
 
-            switch (figure)
+            switch ( board[start[0] - 1, start[1] - 1] )
             {
-                case "1":
+                case 'K':
                     correct = IsKingCorrect(start, end);
                     break;
-                case "2":
+                case 'Q':
                     correct = IsQueenCorrect(start, end);
                     break;
-                case "3":
+                case 'B':
                     correct = IsBishopCorrect(start, end);
                     break;
-                case "4":
+                case 'H':
                     correct = IsHorseCorrect(start, end);
                     break;
-                case "5":
+                case 'R':
                     correct = IsRookCorrect(start, end);
                     break;
-                case "6":
+                case 'P':
                     correct = IsPawnsorrect(start, end);
                     break;
             }
-            WorkConsole.OutputMoveResults(correct);
+            return correct;
+        }
+
+        static void MoveFigure(char[,] board, int[] start, int[] end)
+        {
+            board[end[0] - 1, end[1] - 1] = board[start[0] - 1, start[1] - 1];
+            board[start[0] - 1, start[1] - 1] = ' ';
         }
     }
 }
