@@ -21,6 +21,8 @@ namespace Chess
             }
 
             ReadFigureType(figure, coordStartInArray, coordEndInArray);
+            Board.CreateBoard();
+
         }
 
         static int[] SplitCoordHorizontAndVertical(string coord)
