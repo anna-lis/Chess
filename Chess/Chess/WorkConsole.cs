@@ -6,12 +6,6 @@ namespace Chess
 {
     class WorkConsole
     {
-        public static string SelectFigure()
-        {
-            Console.WriteLine("Выберете фигуру \n1.Король \n2.Ферзь \n3.Слон \n4.Конь \n5.Ладья \n6.Пешка\n");
-            return Console.ReadLine();
-        }
-
         public static void InputData(out string coordStart, out string coordEnd)
         {
             Console.WriteLine("\nВведите начальную и конечную координаты:");
@@ -21,7 +15,7 @@ namespace Chess
 
         public static void ErrorOutput()
         {
-            Console.WriteLine("\nОшибка! Координаты введены неверно");
+            Console.WriteLine("\nОшибка!");
         }
 
         public static void OutputMoveResults(bool correct)
