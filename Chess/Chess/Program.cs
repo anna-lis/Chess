@@ -10,6 +10,8 @@ namespace Chess
 
             while (true)
             {
+                WorkConsole.ClearConsole();
+                WorkConsole.DrawBoard(board);
                 string coordStart;
                 string coordEnd;
                 WorkConsole.InputData(out coordStart, out coordEnd);
