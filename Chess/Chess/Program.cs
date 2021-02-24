@@ -6,31 +6,33 @@ namespace Chess
     {
         static void Main(string[] args)
         {
-            string coordStart;
-            string coordEnd;
-            WorkConsole.InputData(out coordStart, out coordEnd);
-
-            int[] coordStartInArray = SplitCoordHorizontAndVertical(coordStart);
-            int[] coordEndInArray = SplitCoordHorizontAndVertical(coordEnd);
-
-            if (!CheckCoord(coordStartInArray) && !CheckCoord(coordEndInArray))
-            {
-                WorkConsole.ErrorOutput();
-            }
-
             char[,] board = Board.CreateBoard();
 
-            CheckIfFigure(coordStartInArray, coordEndInArray, board);
-
-            if (IdentifyFigure(board, coordStartInArray, coordEndInArray))
+            while (true)
             {
-                MoveFigure(board, coordStartInArray, coordEndInArray);
-            }
-            else
-            {
-                WorkConsole.ErrorOutput();
-            }
+                string coordStart;
+                string coordEnd;
+                WorkConsole.InputData(out coordStart, out coordEnd);
 
+                int[] coordStartInArray = SplitCoordHorizontAndVertical(coordStart);
+                int[] coordEndInArray = SplitCoordHorizontAndVertical(coordEnd);
+
+                if (!CheckCoord(coordStartInArray) && !CheckCoord(coordEndInArray))
+                {
+                    WorkConsole.ErrorOutput();
+                }
+
+                CheckIfFigure(coordStartInArray, coordEndInArray, board);
+
+                if (IdentifyFigure(board, coordStartInArray, coordEndInArray))
+                {
+                    MoveFigure(board, coordStartInArray, coordEndInArray);
+                }
+                else
+                {
+                    WorkConsole.ErrorOutput();
+                }
+            }
         }
         static int[] SplitCoordHorizontAndVertical(string coord)
         {
