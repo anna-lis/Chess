@@ -6,17 +6,17 @@ namespace Chess
 {
     public class Figure
     {
-        static bool IsKingCorrect(int[] start, int[] end)
+        public static bool IsKingCorrect(int[] start, int[] end)
         {
             return Math.Abs(start[0] - end[0]) <= 1 && Math.Abs(start[1] - end[1]) <= 1;
         }
 
-        static bool IsQueenCorrect(int[] start, int[] end)
+        public static bool IsQueenCorrect(int[] start, int[] end)
         {
             return Math.Abs(start[0] - end[0]) == Math.Abs(start[1] - end[1]) || end[0] == start[0] && end[1] != start[1] || end[0] != start[0] && end[1] == start[1];
         }
 
-        static bool IsHorseCorrect(int[] start, int[] end)
+        public static bool IsHorseCorrect(int[] start, int[] end)
         {
             int dx = Math.Abs(end[0] - start[0]);
             int dy = Math.Abs(end[1] - start[1]);
@@ -24,17 +24,17 @@ namespace Chess
             return dx + dy == 3 && dx * dy == 2;
         }
 
-        static bool IsBishopCorrect(int[] start, int[] end)
+        public static bool IsBishopCorrect(int[] start, int[] end)
         {
             return Math.Abs(start[0] - end[0]) == Math.Abs(start[1] - end[1]);
         }
 
-        static bool IsRookCorrect(int[] start, int[] end)
+        public static bool IsRookCorrect(int[] start, int[] end)
         {
             return end[0] == start[0] && end[1] != start[1] || end[0] != start[0] && end[1] == start[1];
         }
 
-        static bool IsPawnsorrect(int[] start, int[] end)
+        public static bool IsPawnsorrect(int[] start, int[] end)
         {
             return end[0] - start[0] == 0 && end[1] - start[1] == 1;
         }

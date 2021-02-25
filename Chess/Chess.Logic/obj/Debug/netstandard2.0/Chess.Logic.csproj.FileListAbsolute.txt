@@ -6,3 +6,4 @@ E:\Anna\ЧелГУ\Chess\Chess\Chess.Logic\bin\Debug\netstandard2.0\Chess.Logic.
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Logic\bin\Debug\netstandard2.0\Chess.Logic.pdb
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Logic\obj\Debug\netstandard2.0\Chess.Logic.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Logic\obj\Debug\netstandard2.0\Chess.Logic.pdb
+E:\Anna\ЧелГУ\Chess\Chess\Chess.Logic\obj\Debug\netstandard2.0\Chess.Logic.csprojAssemblyReference.cache
