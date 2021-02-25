@@ -4,10 +4,13 @@ E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.runtimeconfig
 E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.runtimeconfig.dev.json
 E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.pdb
-E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.csprojAssemblyReference.cache
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.AssemblyInfoInputs.cache
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.AssemblyInfo.cs
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.csproj.CoreCompileInputs.cache
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.pdb
 E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.genruntimeconfig.cache
+E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.csprojAssemblyReference.cache
+E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.Logic.dll
+E:\Anna\ЧелГУ\Chess\Chess\Chess\bin\Debug\netcoreapp3.1\Chess.Logic.pdb
+E:\Anna\ЧелГУ\Chess\Chess\Chess\obj\Debug\netcoreapp3.1\Chess.csproj.CopyComplete
