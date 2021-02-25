@@ -7,17 +7,22 @@ namespace Chess
         static void Main(string[] args)
         {
             char[,] board = Board.CreateBoard();
+            int[] coordSelectCell = { 1, 1 };
+            int[] pastCoordSelectCell = { 1, 1 };
 
             while (true)
             {
                 WorkConsole.ClearConsole();
                 WorkConsole.DrawBoard(board);
-                string coordStart;
-                string coordEnd;
-                WorkConsole.InputData(out coordStart, out coordEnd);
 
-                int[] coordStartInArray = SplitCoordHorizontAndVertical(coordStart);
-                int[] coordEndInArray = SplitCoordHorizontAndVertical(coordEnd);
+                string[] movementOfFigure = new string[2];
+                WorkConsole.CellNavigation(coordSelectCell, pastCoordSelectCell, board, movementOfFigure);
+                //WorkConsole.InputData(out coordStart, out coordEnd);
+
+                int[] coordStartInArray = SplitCoordHorizontAndVertical(movementOfFigure[0]);
+                int[] coordEndInArray = SplitCoordHorizontAndVertical(movementOfFigure[1]);
+
+                //WorkConsole.ChooseCell(coordSelectCell, board);
 
                 if (!CheckCoord(coordStartInArray) && !CheckCoord(coordEndInArray))
                 {
@@ -38,7 +43,7 @@ namespace Chess
         }
         static int[] SplitCoordHorizontAndVertical(string coord)
         {
-            int horizontCoord = coord[0] - 64;
+            int horizontCoord = coord[0] - 48;
             int verticalCoord = Convert.ToInt32(coord[1] - 48);
 
             int[] coordInArray = new int[] { horizontCoord, verticalCoord };
@@ -91,17 +96,26 @@ namespace Chess
 
         static void CheckIfFigure(int[] start, int[] end, char[,] board)
         {
-            if (board[start[0] - 1, start[1] - 1] == ' ')
+            if (board[start[0], start[1]] == ' ')
             {
                 WorkConsole.ErrorOutput();
             }
+        }
+
+        public static bool NewCheckIfFigure(int[] start, char[,] board)
+        {
+            if (board[start[0], start[1]] == ' ')
+            {
+                return false;
+            }
+            else return true;
         }
 
         static bool IdentifyFigure(char[,] board, int[] start, int[] end)
         {
             bool correct = false;
 
-            switch ( board[start[0] - 1, start[1] - 1] )
+            switch ( board[start[0], start[1]] )
             {
                 case 'K':
                     correct = IsKingCorrect(start, end);
@@ -127,8 +141,8 @@ namespace Chess
 
         static void MoveFigure(char[,] board, int[] start, int[] end)
         {
-            board[end[0] - 1, end[1] - 1] = board[start[0] - 1, start[1] - 1];
-            board[start[0] - 1, start[1] - 1] = ' ';
+            board[end[0], end[1]] = board[start[0], start[1]];
+            board[start[0], start[1]] = ' ';
         }
     }
 }

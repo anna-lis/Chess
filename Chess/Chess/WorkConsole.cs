@@ -60,5 +60,56 @@ namespace Chess
         {
             Console.Clear();
         }
+        public static void ChooseCell(int[] coordSelectCell, int[] pastCoordSelectCell, char[,] board)
+        {
+            Console.SetCursorPosition(pastCoordSelectCell[0] * 4 + 2, pastCoordSelectCell[1] * 2 + 1);
+            char pastSelectFigure = board[pastCoordSelectCell[0], pastCoordSelectCell[1]];
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Write($"{pastSelectFigure}");
+            Console.ResetColor();
+
+            Console.SetCursorPosition(coordSelectCell[0] * 4 + 2, coordSelectCell[1] * 2 + 1);
+            char selectFigure = board[coordSelectCell[0], coordSelectCell[1]];
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.Write($"{selectFigure}");
+            Console.ResetColor();
+
+            pastCoordSelectCell[0] = coordSelectCell[0];
+            pastCoordSelectCell[1] = coordSelectCell[1];
+        }
+        public static void CellNavigation(int[] coordSelectCell, int[] pastCoordSelectCell, char[,] board, string[] movementOfFigure)
+        {
+            bool isTheFigureSelected = true;
+            while (true)
+            {
+                ConsoleKey key = Console.ReadKey().Key;
+
+                if ((key == ConsoleKey.DownArrow) && (coordSelectCell[1] < 7))
+                    coordSelectCell[1]++;
+
+                if ((key == ConsoleKey.UpArrow) && (coordSelectCell[1] > 0))
+                    coordSelectCell[1]--;
+
+                if ((key == ConsoleKey.RightArrow) && (coordSelectCell[0] < 7))
+                    coordSelectCell[0]++;
+
+                if ((key == ConsoleKey.LeftArrow) && (coordSelectCell[0] > 0))
+                    coordSelectCell[0]--;
+
+                ChooseCell(coordSelectCell, pastCoordSelectCell, board);
+
+                if ((key == ConsoleKey.Enter) && (!isTheFigureSelected))
+                {
+                    movementOfFigure[1] = $"{coordSelectCell[0]}{coordSelectCell[1]}";
+                    break;
+                }
+
+                if ((key == ConsoleKey.Enter) && (isTheFigureSelected) && (Program.NewCheckIfFigure(coordSelectCell, board)))
+                {
+                    movementOfFigure[0] = $"{coordSelectCell[0]}{coordSelectCell[1]}";
+                    isTheFigureSelected = false;
+                }
+            }
+        }
     }
 }
