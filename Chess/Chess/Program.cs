@@ -40,14 +40,6 @@ namespace Chess
             }
         }
 
-        public static void CheckIfFigure(int[] start, int[] end, char[,] board)
-        {
-            if (board[start[0], start[1]] == ' ')
-            {
-                WorkConsole.ErrorOutput();
-            }
-        }
-
         public static int[] SplitCoordHorizontAndVertical(string coord)
         {
             int horizontCoord = coord[0] - 48;
@@ -66,6 +58,14 @@ namespace Chess
             else
             {
                 return false;
+            }
+        }
+
+        public static void CheckIfFigure(int[] start, int[] end, char[,] board)
+        {
+            if (board[start[0], start[1]] == ' ')
+            {
+                WorkConsole.ErrorOutput();
             }
         }
     }
