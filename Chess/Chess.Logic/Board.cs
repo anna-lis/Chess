@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Chess
 {
-    class Board
+    public class Board
     {
         public static char[,] CreateBoard()
         {
