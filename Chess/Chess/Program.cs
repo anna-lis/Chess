@@ -27,7 +27,7 @@ namespace Chess
                     WorkConsole.ErrorOutput();
                 }
 
-                CheckIfFigure(coordStartInArray, coordEndInArray, board);
+                CheckIfFigure(coordStartInArray, board);
 
                 if (Figure.IdentifyFigure(board, coordStartInArray, coordEndInArray))
                 {
@@ -61,7 +61,7 @@ namespace Chess
             }
         }
 
-        public static void CheckIfFigure(int[] start, int[] end, char[,] board)
+        public static void CheckIfFigure(int[] start, char[,] board)
         {
             if (board[start[0], start[1]] == ' ')
             {

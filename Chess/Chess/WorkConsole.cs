@@ -6,29 +6,10 @@ namespace Chess
 {
     class WorkConsole
     {
-        public static void InputData(out string coordStart, out string coordEnd)
-        {
-            Console.WriteLine("\nВведите начальную и конечную координаты:");
-
-            coordStart = Console.ReadLine();
-            coordEnd = Console.ReadLine();
-        }
 
         public static void ErrorOutput()
         {
             Console.WriteLine("\nОшибка!");
-        }
-
-        public static void OutputMoveResults(bool correct)
-        {
-            if (correct)
-            {
-                Console.WriteLine("\nХод фигуры верный!");
-            }
-            else 
-            {
-                Console.WriteLine("\nХод фигуры неверный!");
-            }
         }
 
         public static void DrawBoard(char[,] board)
@@ -83,7 +64,7 @@ namespace Chess
             Console.SetCursorPosition(coordSelectCell[0] * 4 + 2, coordSelectCell[1] * 2 + 1);
             char selectFigure = board[coordSelectCell[0], coordSelectCell[1]];
 
-            Console.BackgroundColor = ConsoleColor.DarkYellow;
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
 
             Console.Write($"{selectFigure}");
             Console.ResetColor();
