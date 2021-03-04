@@ -90,7 +90,6 @@ E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\zh-Hant\Micro
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\Chess.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\Chess.Logic.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\Chess.Logic.pdb
-E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\Chess.pdb
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.csprojAssemblyReference.cache
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.AssemblyInfoInputs.cache
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.AssemblyInfo.cs
@@ -99,3 +98,4 @@ E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.c
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.dll
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.pdb
 E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\obj\Debug\netcoreapp3.1\Chess.Tests.genruntimeconfig.cache
+E:\Anna\ЧелГУ\Chess\Chess\Chess.Tests\bin\Debug\netcoreapp3.1\Chess.pdb
