@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chess.Logic", "Chess.Logic\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chess.Tests", "Chess.Tests\Chess.Tests.csproj", "{C69384E5-3764-4096-8F79-307B5EF865A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AvaloniaApplication1", "AvaloniaApplication1\AvaloniaApplication1.csproj", "{1B5B0858-A1CA-4A65-8CF0-C90C919F97AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chess.Avalonia", "AvaloniaApplication1\Chess.Avalonia.csproj", "{1B5B0858-A1CA-4A65-8CF0-C90C919F97AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
