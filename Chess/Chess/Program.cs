@@ -6,7 +6,7 @@ namespace Chess
     {
         static void Main(string[] args)
         {
-            char[,] board = Board.CreateBoard();
+            char[,] board = Board.CreateBoard(); //love
 
             int[] coordSelectCell = { 1, 1 };
             int[] pastCoordSelectCell = { 1, 1 };
